@@ -46,3 +46,5 @@ ipython_config.py
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+.DS_Store
