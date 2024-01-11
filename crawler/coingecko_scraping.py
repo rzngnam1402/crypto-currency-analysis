@@ -35,7 +35,7 @@ def fetch_bitcoin_data():
     daily_ohlc = daily_ohlc.iloc[1:-1]
     print(daily_ohlc)
 
-    existing_data = pd.read_csv('../data/BTC.csv')
+    existing_data = pd.read_csv('../data/BTC_OHLC.csv')
     existing_data.rename(columns={'date': 'timestamp'}, inplace=True)
     existing_data.set_index('timestamp', inplace=True)
     print(existing_data.tail(5))
@@ -43,7 +43,7 @@ def fetch_bitcoin_data():
     existing_data.update(daily_ohlc)
     print(existing_data.tail(5))
 
-    existing_data.to_csv('../data/BTC.csv')
+    existing_data.to_csv('../data/BTC_OHLC.csv')
 
 
 if __name__ == '__main__':

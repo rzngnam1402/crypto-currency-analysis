@@ -39,25 +39,6 @@ def scrape_bitcoin_tweet_volume():
     df.set_index('timestamp', inplace=True)
 
     df.to_csv('../data/BTC_TwitterVolume.csv')
-    # Parsing the data
-    # data = []
-    # for row in data_str.split('],['):
-    #     #     # Using regular expression to extract date and tweet count
-    #     match = re.match(r"new Date\((\d{4}/\d{2}/\d{2})\),(\d+)", row)
-    #     print(match)
-    # if match:
-    #         date_str, tweet_count = match.groups()
-    #         date = datetime.strptime(date_str, '%Y/%m/%d')
-    #         tweet_count = int(tweet_count)
-    #         data.append((date, tweet_count))
-
-    # # Convert to DataFrame
-
-    # # Optionally filter data for the latest month or any specific time range
-    # last_month = datetime.now() - timedelta(days=30)
-    # df = df[df['Date'] > last_month]
-
-    # return df
 
 
 if __name__ == '__main__':
